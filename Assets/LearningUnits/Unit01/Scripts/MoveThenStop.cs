@@ -21,12 +21,13 @@ public class MoveThenStop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(moveDirection);
-        
+
         if (Vector3.Distance(transform.position, destination) < .1f)
         {
+            return;
         }
 
-        return;
+        transform.Translate(moveDirection);
+
     }
 }
